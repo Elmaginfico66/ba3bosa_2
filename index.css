@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #222;
+    background-color: #f9f9f9;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: #D80027;
+    color: white;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header img {
+    display: block;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: #FFD700;
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Main content sections */
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid #e6e6e6;
+    min-height: 400px;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    margin-bottom: 1.5rem;
+    color: #D80027;
+    font-size: 2rem;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+section ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    list-style: disc outside;
+}
+
+section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Trophy showcase grid */
+.trophy-grid,
+.legend-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.trophy-grid a,
+.legend-cards a {
+    display: block;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.trophy-grid a:hover,
+.legend-cards a:hover {
+    transform: translateY(-8px);
+}
+
+.trophy-grid img,
+.legend-cards img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+.hero-image img,
+.stadium-showcase img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+.hero-image,
+.stadium-showcase {
+    max-width: 700px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-image a,
+.stadium-showcase a {
+    display: block;
+}
+
+.caption {
+    margin-top: 0.75rem;
+    color: #555;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Footer styling */
+footer {
+    padding: 2.5rem;
+    text-align: center;
+    background-color: #D80027;
+    color: white;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    line-height: 1.6;
+}
+
+footer p:first-child {
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 0.5rem;
+}
+
+.contact-link {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .main-nav ul {
+        gap: 1rem;
+    }
+    
+    section {
+        padding: 2rem 1rem;
+    }
+    
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
